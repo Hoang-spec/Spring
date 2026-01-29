@@ -23,15 +23,98 @@ This project aims to develop a web platform for University Training Management S
 ## Task Board (Scrum)
 
 ### Product Backlog
-| Task ID | Description                               | Priority | Status      |
-|--------|-------------------------------------------|----------|-------------|
-| 1      | Setup project repository                  | High     | Done        |
-| 2      | Design database schema                    | High     | In Progress |
-| 3      | Develop user authentication module        | High     | Pending     |
-| 4      | Create React components for ticket booking| Medium   | Pending     |
-| 5      | Implement API for system                  | High     | Pending     |
-| 6      | Setup CI/CD pipeline                      | Medium   | Pending     |
-| 7      | Testing and QA                            | High     | Pending     |
+**I. NHÓM QUẢN LÝ NGƯỜI DÙNG – PHÂN QUYỀN**
+| STT | Tên bảng         | Chức năng                                                          |
+| --- | ---------------- | ------------------------------------------------------------------ |
+| 1   | users            | Lưu tài khoản đăng nhập hệ thống cho SV, GV, giáo vụ, admin        |
+| 2   | roles            | Định nghĩa vai trò người dùng (ADMIN, GIAOVU, GIANGVIEN, SINHVIEN) |
+| 3   | user_roles       | Gán nhiều vai trò cho một user                                     |
+| 4   | permissions      | Danh sách quyền chức năng trong hệ thống                           |
+| 5   | role_permissions | Gán quyền cụ thể cho từng vai trò                                  |
+
+**II. NHÓM QUẢN LÝ SINH VIÊN**
+| STT | Tên bảng        | Chức năng                                                      |
+| --- | --------------- | -------------------------------------------------------------- |
+| 6   | students        | Thông tin hồ sơ sinh viên                                      |
+| 7   | student_status  | Trạng thái sinh viên (đang học, bảo lưu, thôi học, tốt nghiệp) |
+| 8   | student_classes | Gán sinh viên vào lớp hành chính                               |
+
+**III. NHÓM QUẢN LÝ GIẢNG VIÊN – NHÂN SỰ**
+| STT | Tên bảng    | Chức năng                                   |
+| --- | ----------- | ------------------------------------------- |
+| 9   | lecturers   | Thông tin giảng viên                        |
+| 10  | departments | Khoa / Viện quản lý giảng viên và ngành học |
+| 11  | positions   | Chức danh giảng viên (GV, ThS, TS, PGS…)    |
+
+**IV. NHÓM QUẢN LÝ CHƯƠNG TRÌNH – MÔN HỌC**
+| STT | Tên bảng             | Chức năng                                            |
+| --- | -------------------- | ---------------------------------------------------- |
+| 12  | majors               | Ngành đào tạo (Kỹ thuật máy tính, Trí tuệ nhân tạo…) |
+| 13  | training_programs    | Chương trình đào tạo theo ngành và khóa              |
+| 14  | courses              | Môn học / học phần                                   |
+| 15  | course_prerequisites | Môn học tiên quyết                                   |
+
+**V. NHÓM QUẢN LÝ HỌC KỲ – LỚP HỌC PHẦN**
+| STT | Tên bảng                | Chức năng                             |
+| --- | ----------------------- | ------------------------------------- |
+| 16  | semesters               | Học kỳ (HK1 2024–2025…)               |
+| 17  | course_classes          | Lớp học phần mở trong học kỳ          |
+| 18  | lecturer_course_classes | Phân công giảng viên dạy lớp học phần |
+
+**VI. NHÓM ĐĂNG KÝ HỌC PHẦN**
+| STT | Tên bảng             | Chức năng                  |
+| --- | -------------------- | -------------------------- |
+| 19  | course_registrations | Sinh viên đăng ký học phần |
+| 20  | registration_periods | Đợt đăng ký học phần       |
+
+**VII. NHÓM QUẢN LÝ LỊCH HỌC – PHÒNG HỌC**
+| STT | Tên bảng  | Chức năng                          |
+| --- | --------- | ---------------------------------- |
+| 21  | rooms     | Phòng học                          |
+| 22  | buildings | Tòa nhà / khu giảng đường          |
+| 23  | schedules | Lịch học chi tiết cho lớp học phần |
+
+**VIII. NHÓM ĐIỂM – ĐÁNH GIÁ HỌC TẬP**
+| STT | Tên bảng         | Chức năng                                       |
+| --- | ---------------- | ----------------------------------------------- |
+| 24  | grade_components | Thành phần điểm (chuyên cần, giữa kỳ, cuối kỳ…) |
+| 25  | student_grades   | Điểm sinh viên theo học phần                    |
+| 26  | grade_scales     | Thang điểm (10, chữ A–F…)                       |
+
+**IX. NHÓM HỌC PHÍ – TÀI CHÍNH**
+| STT | Tên bảng        | Chức năng                               |
+| --- | --------------- | --------------------------------------- |
+| 27  | tuition_fees    | Mức học phí theo tín chỉ / chương trình |
+| 28  | student_tuition | Học phí sinh viên theo học kỳ           |
+| 29  | payments        | Lịch sử thanh toán học phí              |
+
+**X. NHÓM QUẢN LÝ THI – KHẢO THÍ**
+| STT | Tên bảng   | Chức năng                                  |
+| --- | ---------- | ------------------------------------------ |
+| 30  | exam_types | Loại kỳ thi (giữa kỳ, cuối kỳ, cải thiện…) |
+| 31  | exams      | Lịch thi                                   |
+| 32  | exam_rooms | Phân phòng thi                             |
+
+**XI. NHÓM QUẢN LÝ TỐT NGHIỆP**
+| STT | Tên bảng              | Chức năng                |
+| --- | --------------------- | ------------------------ |
+| 33  | graduation_conditions | Điều kiện xét tốt nghiệp |
+| 34  | graduation_results    | Kết quả xét tốt nghiệp   |
+
+**XII. NHÓM THÔNG BÁO – HỆ THỐNG**
+| STT | Tên bảng      | Chức năng                           |
+| --- | ------------- | ----------------------------------- |
+| 35  | notifications | Thông báo hệ thống                  |
+| 36  | logs          | Nhật ký hoạt động (audit, truy vết) |
+| 37  | settings      | Cấu hình hệ thống                   |
+
+**XIII. NHÓM MỞ RỘNG THƯỜNG DÙNG**
+| STT | Tên bảng   | Chức năng                     |
+| --- | ---------- | ----------------------------- |
+| 38  | documents  | Tài liệu học tập              |
+| 39  | feedbacks  | Đánh giá giảng viên / môn học |
+| 40  | attendance | Điểm danh sinh viên           |
+
 
 ### Sprint 1
 
