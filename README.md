@@ -204,13 +204,13 @@ This project aims to develop a web platform for University Training Management S
 | 2       | Authentication module integration issues      | High     | Pending | Conduct code reviews, add tests          |
 
 ## Useful Links
-## Useful Links
 
 - [Project Repository](https://github.com/....)
 - [Design Mockups](https://www.figma.com/file/XXXXXX/Project-Designs)
 - [API Documentation](https://project-docs.com/api)
 - [Check payment](https://payos.vn/)
-
+- [Official Website](https://spring.io/)
+- [Build, deploy, and scale your apps](https://render.com/)
 ---
 
 ### Notes
