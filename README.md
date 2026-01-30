@@ -210,7 +210,8 @@ This project aims to develop a web platform for University Training Management S
 - [API Documentation](https://project-docs.com/api)
 - [Check payment](https://payos.vn/)
 - [Official Website](https://spring.io/)
-- [Build, deploy, and scale your apps](https://render.com/)
+- [Build, deploy, and scale](https://render.com/)
+- [Build, deploy, and scale]([https://render.com/]
 ---
 
 ### Notes
