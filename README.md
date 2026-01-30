@@ -211,7 +211,7 @@ This project aims to develop a web platform for University Training Management S
 - [Check payment](https://payos.vn/)
 - [Official Website](https://spring.io/)
 - [Build, deploy, and scale]-https://render.com/
-- [Build, deploy, and scale]-https://render.com/
+- [Build, deploy, and scale]-https://railway.com/
 ---
 
 ### Notes
