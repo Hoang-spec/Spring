@@ -207,6 +207,7 @@ This project aims to develop a web platform for University Training Management S
 
 - [Project Repository](https://github.com/....)
 - [Design Mockups](https://www.figma.com/file/XXXXXX/Project-Designs)
+- [Project analysis] https://docs.google.com/spreadsheets/d/1hEFl53luJZqVWlzLvfg0kmV_pNOnnnARoiAl3UasRRw/edit?usp=sharing
 - [API Documentation](https://project-docs.com/api)
 - [Check payment](https://payos.vn/)
 - [Official Website](https://spring.io/)
